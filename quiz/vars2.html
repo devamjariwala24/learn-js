@@ -2,10 +2,10 @@
     <head>
         <script>
             // change the script such that i=0,1,2,3,4 is logged in the console
-            for (var i = 0; i < 5; i++) {
+            for (let i = 0; i < 5; i++) { // this will print only 5. 
                 // setTimeout executes the function after 5 ms
-                setTimeout(function() {
-                    console.log(i);
+                setTimeout(function() { // when this is var, the function will be executed after main threading (main for loop execution). To avoid this, use let (let is not accessible outside the block, js will access the current vlaue of i in the loop and print the current value of i.)
+                    console.log(i); // if it was var, i will be updated globally. if it was let, it would have been updated every loop.
                 }, 5);
             }
         </script>

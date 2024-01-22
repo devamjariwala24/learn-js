@@ -5,9 +5,12 @@
             let x = 1;
             var y = 2;
             {
+                
                 y = y + 1;
                 console.log(x+y);
-                let y = 2;
+                // let y = 2;
+                var y = 2; // var is applied to the whole block, js will parse for 2 times,
+                // first time it will check for all the variables declared, and next time it will do the operations.
             }
             console.log(x);
             console.log(y);
