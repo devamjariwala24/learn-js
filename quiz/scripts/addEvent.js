@@ -5,6 +5,14 @@ window.onload = function() {
     x.addEventListener('mouseout', myThirdFunction('Moused out!'));
 }
 
+// you can also do the changes itself when defining the action event
+//{
+// x.addEventListener('mouseover', () => myFunction('Moused over!'));
+// x.addEventListener('click', () => mySecondFunction('Clicked!'));
+// x.addEventListener('mouseout',() =>  myThirdFunction('Moused out!'));
+// }
+
+
 function myFunction(msg) {
     return () => document.getElementById('demo').textContent = msg;
 }
