@@ -16,15 +16,15 @@ window.onload = function() {
               list.innerHTML = '';
 
               let myHistoryCopy = Array.from(myHistory);
-              myHistory.sort(function(a,b){
+              myHistory.sort(function(a,b) {
                 return a.length - b.length;
-              })
+              });
               
 
               // loop through the sorted array, and display all the search terms in the list
               for (const itemText of myHistoryCopy) {
                 const listItem = document.createElement('li');
-                listItem.textcontent = itemText;
+                listItem.textContent = itemText;
                 list.appendChild(listItem);
               }
 
