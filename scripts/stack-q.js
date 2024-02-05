@@ -12,20 +12,21 @@ class PStack {
 }
 
 class PStackImpl extends PStack {
+  #persons = [];
   constructor() {
     super();
     this.persons = [];
   }
   push(p) {
-    return this.persons.push(p)
+    return this.#persons.push(p)
   }
 
   pop() {
-    return this.persons.pop().age
+    return this.#persons.pop().age
   }
 
   show() {
-    return this.persons
+    return this.#persons
   }
 
 }
@@ -37,4 +38,5 @@ pstack.push({name: 'Dein', age: 19});
 console.log(pstack.pop());
 console.log(pstack.pop());
 console.log(pstack.show());
+console.log(pstack.showId());
 console.log(pstack.persons);
